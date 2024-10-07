@@ -40,7 +40,7 @@ Git
 
 **Installation**
 **1. Clone the Repository**
-git clone https://github.com/your-username/culinary-collections.git
+git clone https://github.com/P-0707/culinary-collections.git
 cd culinary-collections
 
 **2. Create and Activate a Virtual Environment**
