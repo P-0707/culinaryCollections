@@ -1,0 +1,45 @@
+{% extends 'recipes/partials/base.html' %}
+{% load static %}
+
+{% block title %}Home - My Culinary Collections{% endblock %}
+
+{% block content %}
+<div id="starter">
+    <img src="{% static 'recipes/images/p1.jpg' %}" class="img-fluid" alt="Background Image">
+    <div class="banner-content">
+        <h1>Welcome to Culinary Collections!</h1>
+        <h2>Explore the Art of Cooking</h2>
+        <p>Embark on a journey through flavors and traditions, where every dish tells a story. <br> Discover delicious recipes and culinary inspirations!</p>
+    </div>
+</div>
+
+<div id="recipes">
+    <h2>Featured Recipes</h2> 
+    <div class="row"> 
+        {% for recipe in recipes %}
+        <div class="col-md-4">
+            <div class="card mt-5 recipe-card">
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
+                {% else %}
+                    <img src="{% static 'recipes/images/placeholder.jpg' %}" alt="No image available" class="recipe-image">
+                {% endif %}
+                <div class="card-body">
+                    <h4> <strong> {{ recipe.title }} </strong></h4>
+                    <p>{{ recipe.description|truncatewords:10 |safe  }}</p>
+                    <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="about-us">
+    <h3>About Us</h3>
+    <p>"Culinary Collections is an online community dedicated to food enthusiasts and home cooks. We believe that cooking is not just a necessity but an art that brings people together. Our platform is designed to inspire and guide you through an exciting culinary journey, offering a variety of recipes from different cuisines around the world. Whether you're an expert chef or just starting in the kitchen, you'll find something to ignite your passion for food here.</p>
+
+    <p>At Culinary Collections, we focus on sharing more than just recipes. We explore the stories behind the dishes, cultural influences, and culinary traditions. Our mission is to connect food lovers from all walks of life, providing a space for sharing tips, cooking techniques, and meal ideas that you can try at home. Join our growing community and discover how easy it is to create restaurant-quality meals with simple ingredients, right in your own kitchen!"</p>
+</div>
+{% endblock %}

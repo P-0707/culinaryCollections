@@ -1,0 +1,71 @@
+{% load static %}
+
+<div class="navbar">
+    <a href="{% url 'home' %}" class="navbar-brand">
+        <img src="{% static 'recipes/images/brand.png' %}" alt="Brand Logo" style="height: 40px; vertical-align: middle;">
+    </a>
+
+    <ul class="navbar-menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+
+        <!-- Dropdown for Categories -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Categories</a>
+            <ul class="dropdown-menu">
+                {% for category in categories %}
+                    <li><a href="{% url 'category_recipes' category.name %}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+
+        <!-- Dropdown for Collections -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Collections</a>
+            <ul class="dropdown-menu">
+                {% for collection in collections %}
+                    <li><a href="{% url 'collection_recipes' collection.title %}">{{ collection.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Search bar -->
+    <form class="search-bar" method="GET" action="{% url 'search_results' %}">
+        <input type="text" name="q" placeholder="Search..." aria-label="Search">
+        <button type="submit">Search</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown-toggle');
+    
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+                    console.log('Dropdown toggled'); // Debug message
+                    const menu = this.nextElementSibling; // Get the dropdown menu
+                    
+                    // Toggle the dropdown menu visibility
+                    if (menu.style.display === "block") {
+                        menu.style.display = "none";
+                    } else {
+                        menu.style.display = "block";
+                    }
+                });
+            });
+    
+            // Close dropdowns if clicked outside
+            window.addEventListener('click', function(event) {
+                if (!event.target.matches('.dropdown-toggle')) {
+                    dropdowns.forEach(dropdown => {
+                        const menu = dropdown.nextElementSibling;
+                        if (menu.style.display === "block") {
+                            menu.style.display = "none";
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    
+</div>

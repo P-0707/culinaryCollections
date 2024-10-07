@@ -1,0 +1,363 @@
+
+body{
+    background-color:  #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+
+}
+
+/* navigation bar */
+/* Navigation bar styles */
+.navbar {
+    background-color: black;
+    color: gold;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu styling */
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual menu item styles */
+.navbar-menu li {
+    position: relative; /* Make sure dropdown is positioned correctly */
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: gold;
+    text-decoration: none;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    color: #ffd700;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative; /* Set positioning context */
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Absolute position relative to the dropdown */
+    background-color: black; /* Dropdown background color */
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    min-width: 150px; /* Minimum width of dropdown */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    border: 1px solid gold; /* Border around the dropdown */
+}
+
+/* Dropdown item styles */
+.dropdown-menu li {
+    width: 100%; /* Full width for dropdown items */
+}
+
+.dropdown-menu li a {
+    display: block; /* Make links block level for easier clicking */
+    padding: 10px; /* Padding inside links */
+    color: gold; /* Text color */
+    text-decoration: none; /* No underline */
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu li a:hover {
+    background-color: gold; /* Background color on hover */
+    color: black; /* Text color on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+}
+
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid gold;
+    background-color: white;
+    color: black;
+}
+
+.search-bar button {
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    padding: 5px 10px;
+    margin-left: 5px; /* Small space between input and button */
+}
+
+.search-bar button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* To ensure the dropdown works */
+.dropdown-menu {
+    display: none; /* Initially hide the dropdown */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+
+
+/* home page */
+#starter {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#starter img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.banner-content {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    padding: 20px;
+}
+
+.banner-content h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 52px;
+    font-style: italic;
+}
+
+.banner-content h2{
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 45px;
+}
+
+.banner-content p{
+    color: navy;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#recipes {
+    margin: 60px; 
+}
+
+/* Recipe image styles */
+.recipe-image {
+    height: 200px; /* Set fixed height */
+    width: 200px;  /* Set fixed width */
+    object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+    border-radius: 8px; /* Optional: adds rounded corners to images */
+}
+
+/* Recipe card styles */
+.recipe-card {
+    display: flex;
+    flex-direction: column; /* Ensure content is stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Increased height for the card */
+    border: 2px solid gold; /* Add a border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Add some padding inside the card */
+    transition: transform 0.2s; /* Smooth scale effect on hover */
+}
+
+
+/* Card hover effect */
+.recipe-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.card-body h4{
+    color: #001f3f;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.card-body p{
+    color: black;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: black; /* Button background color */
+    color: gold; /* Button text color */
+    border: 1px solid gold; /* Button border */
+}
+
+.btn-primary:hover {
+    background-color: gold; /* Button background on hover */
+    color: black; /* Button text color on hover */
+}
+
+
+.recipe-image {
+    height: 150px;
+    width: 150px;
+}
+
+#recipes h2{
+    color: navy;
+    font-weight: bolder;
+    font-size: 42px;
+    font-style: italic;
+}
+
+.about-us {
+    margin: 40px;
+}
+
+.about-us h3 {
+    color: navy;
+    font-weight: bolder;
+    font-size: 42px;
+    font-style: italic;
+}
+
+.about-us p {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+/* Gaps for pages */
+/* Recipe details section container */
+.gap {
+    width: 82%;  
+    padding: 20px;
+    margin: 20px auto; 
+    background-color: #f9f5e7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid gold;
+    border-radius: 22px;
+    font-size: 22px; /* Increase overall font size for readability */
+}
+
+/* Recipe title */
+.recipe-title {
+    color: #8b4513; /* Chocolate brown */
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center; /* Optional: center the title */
+    margin-bottom: 20px;
+}
+
+/* Recipe image */
+.image-container img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    max-width: 400px; /* Set a max width to avoid too large images */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    border-radius: 8px;
+}
+
+/* Section titles (Description, Ingredients, Instructions, etc.) */
+.section-title {
+    color: #cc5500; /* Burnt orange */
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* Regular content text */
+.gap p {
+    color: black; /* Content text in black */
+    font-size: 18px; /* Increase the font size for readability */
+    line-height: 1.6; /* Improve line spacing for readability */
+}
+
+
+.category-container {
+    padding: 20px; /* Padding around the content */
+    margin: 20px auto; /* Center the container and add top/bottom margin */
+    max-width: 1200px; /* Maximum width for the container */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Category title */
+.category-container h1 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #8b4513; /* Change color if needed */
+    font-weight: bolder;
+    font-style: italic;
+}
+.recipe-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Adjust alignment */
+    align-items: center;
+    border: 2px solid gold; /* Add border to cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 15px; /* Padding inside the cards */
+    margin: 10px; /* Margin around each card */
+    margin-bottom: 10px;
+    transition: transform 0.2s; /* Transition for hover effect */
+    background-color: #f9f5e7; /* Card background color */
+    height: 460px; /* Fixed height for uniformity */
+}
+
+/* Recipe image styles */
+.recipe-image {
+    height: 180px; /* Fixed height for images */
+    width: 100%; /* Take full width of the card */
+    object-fit: cover; /* Ensure image fits well */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Card hover effect */
+.recipe-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Row layout for cards */
+.row1 {
+    display: flex; /* Use flexbox for the layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items in the row */
+}
+
+
+/* styles.css */
+.footer {
+    background-color: black;
+    color: gold;
+    text-align: center; /* Center text instead of using <center> */
+    border: 2px solid gold;
+    margin: 10px;
+    padding: 10px;
+}

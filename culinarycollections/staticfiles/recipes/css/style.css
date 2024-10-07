@@ -1,0 +1,219 @@
+
+body{
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+
+}
+
+/* navigation bar */
+/* Navbar styles */
+.navbar {
+    background-color: black;
+    color: gold;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+/* Menu styling */
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual menu item styles */
+.navbar-menu li {
+    margin: 0 15px; /* Adds margin to both sides of each menu item */
+}
+
+.navbar-brand img{
+    height: 120px;
+    width: 120px;
+
+}
+
+.navbar a {
+    color: gold;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ffd700; /* Slightly lighter gold when hovering */
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 1;
+    border: 1px solid gold;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: gold;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid gold;
+    background-color: white;
+    color: black;
+}
+
+.search-bar button {
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    padding: 5px 10px;
+    margin-left: 5px; /* Small space between input and button */
+}
+
+.search-bar button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* To ensure the dropdown works */
+.dropdown-menu {
+    display: none; /* Initially hide the dropdown */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+
+
+/* home page */
+#starter {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#starter img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.banner-content {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    padding: 20px;
+}
+
+.banner-content h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 52px;
+    font-style: italic;
+}
+
+.banner-content h2{
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 45px;
+}
+
+.banner-content p{
+    color: navy;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+#recipes {
+    margin: 40px; 
+}
+
+.row h2{
+    color: navy;
+    font-weight: bolder;
+    font-size: 42px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.recipe-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.recipe-image {
+    height: 150px;
+    width: 150px;
+}
+
+.about-us {
+    margin: 40px;
+}
+
+.about-us h3 {
+    color: navy;
+    font-weight: bolder;
+    font-size: 42px;
+    font-style: italic;
+}
+
+.about-us p {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+/* styles.css */
+.footer {
+    background-color: black;
+    color: gold;
+    text-align: center; /* Center text instead of using <center> */
+    border: 2px solid gold;
+    margin: 10px;
+    padding: 10px;
+}
