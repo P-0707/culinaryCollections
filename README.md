@@ -2,49 +2,68 @@
 
 Culinary Collections is an online platform for food enthusiasts and home cooks. It allows users to explore, search, and view a wide variety of recipes, each with detailed instructions, ingredients, and more. This platform is designed to inspire creativity in the kitchen and make cooking a more enjoyable and communal experience.
 
+
 **Table of Contents**
 
-Project Overview
-Features
-Technologies Used
-Setup and Installation
-Usage
-Contributing
-License
+1. Project Overview
+2. Features
+3. Technologies Used
+4. Setup and Installation
+5. Usage
+6. Contributing
+7. License
+
 
 **Project Overview**
 
 The platform features a user-friendly interface where recipes are categorized and easily accessible. Users can:
 
 -> Search recipes by title, ingredient, or category.
+
 -> View recipe details such as preparation time, cooking instructions, ingredients, and servings.
+
 -> Explore curated recipe collections.
+
 -> Read about the platform and its mission.
 
 **Features**
 
 **-> Search Functionality:** Search recipes by keyword.
+
 **-> Recipe Categories:** View recipes sorted by specific categories.
+
 **-> Detailed Recipe Pages:** Each recipe has a detailed page with a description, ingredients, instructions, cooking time, and an image.
+
 **-> Responsive Design:** The website is responsive, ensuring a smooth experience across different devices (desktop, tablet, mobile).
+
 **-> Dynamic Navigation Bar:** Includes a dropdown menu with quick access to various categories and collections.
+
 
 **Technologies Used**
 
 -> Backend: Django (Python)
+
 -> Frontend: HTML, CSS, Bootstrap
+
 -> Database: SQLite (default with Django, but can be replaced with PostgreSQL or other databases)
+
 -> Template Engine: Django Templating Language (DTL)
+
 -> Version Control: Git
+
 -> Deployment: (Optional: Add if deployed to a platform like Heroku, Vercel, etc.)
+
 
 **Setup and Installation**
 
 **Prerequisites**
 
 Python 3.x
+
 Django 4.x
+
 Git
+
 
 **Installation**
 
@@ -75,10 +94,15 @@ To load sample recipes into the database, you can create fixtures or use the Dja
 **Usage**
 
 -> Access the homepage to explore featured recipes.
+
 -> Use the search bar to find recipes by keyword.
+
 -> Browse through different categories to discover a variety of cuisines.
+
 -> Click on any recipe card to view its details (ingredients, instructions, etc.).
+
 -> Use the navigation bar to access different sections like collections, categories, and search.
+
 
 **Contributing**
 
